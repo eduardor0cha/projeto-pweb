@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="/js/GerenciadorTarefas.js"></script>
+    <script type="text/javascript" src="/domain/tarefa.js"></script>
+    <title>To do</title>
+  </head>
+  <body>
+    <nav>
+      <div id="nome">To-Do Notes</div>
+      <button id="addColuna">+</button>
+    </nav>
+    <main>
+      <div id="coluna1" class="coluna">
+        <div class="titulo">
+          <div class="texto">
+            <p>Feito</p>
+          </div>
+          <div class="button">
+            <button>X</divbutton>
+          </div>
+        </div>
+        <div class="corpo">
+          <div draggable="true" class="tarefa">
+            <div class="cabecalho-tarefa">
+              <h5 class="titulo-tarefa">Tarefa teste</h5>
+              <button class="fechar-tarefa" onclick="handleDeleteTarefa()">X</button>
+            </div>
+            <p class="descricao-tarefa">Descriçãozinha</p>
+            <p class="prazo-tarefa">Prazo: 15/08/2022</p>
+          </div>
+        </div>
+      </div>
+      <div id="coluna2" class="coluna">
+        <div class="titulo">
+          <div class="texto">
+            <p>Fazendo</p>
+          </div>
+          <div class="button">
+            <button>X</divbutton>
+          </div>
+        </div>
+        <div class="corpo">
+          <div draggable="true" class="tarefa">
+            <div class="cabecalho-tarefa">
+              <h5 class="titulo-tarefa">Tarefa teste</h5>
+              <button class="fechar-tarefa" onclick="handleDeleteTarefa()">X</button>
+            </div>
+            <p class="descricao-tarefa">Descriçãozinha</p>
+            <p class="prazo-tarefa">Prazo: 15/08/2022</p>
+          </div>
+        </div>
+      </div>
+      <div id="coluna3" class="coluna">
+        <div class="titulo">
+          <div class="texto">
+            <p>Feito</p>
+          </div>
+          <div class="button">
+            <button>X</divbutton>
+          </div>
+        </div>
+        <div class="corpo">
+          <div draggable="true" class="tarefa">
+            <div class="cabecalho-tarefa">
+              <h5 class="titulo-tarefa">Tarefa teste</h5>
+              <button class="fechar-tarefa" onclick="handleDeleteTarefa()">X</button>
+            </div>
+            <p class="descricao-tarefa">Descriçãozinha</p>
+            <p class="prazo-tarefa">Prazo: 15/08/2022</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
