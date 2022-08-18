@@ -18,6 +18,7 @@ class Tarefa {
 
   toJSON() {
     return {
+      id: this.id,
       nome: this.nome,
       descricao: this.descricao,
       data: this.data,

@@ -66,6 +66,7 @@ main {
   font-size: 14px;
   border: 1px solid black;
   padding: 0.8rem;
+  height: 100%;
 }
 
 .tarefa {

@@ -16,21 +16,13 @@
       <div id="coluna1" class="coluna">
         <div class="titulo">
           <div class="texto">
-            <p>Feito</p>
+            <p>Pendente</p>
           </div>
           <div class="button">
             <button>X</divbutton>
           </div>
         </div>
-        <div class="corpo">
-          <div draggable="true" class="tarefa">
-            <div class="cabecalho-tarefa">
-              <h5 class="titulo-tarefa">Tarefa teste</h5>
-              <button class="fechar-tarefa" onclick="handleDeleteTarefa()">X</button>
-            </div>
-            <p class="descricao-tarefa">Descriçãozinha</p>
-            <p class="prazo-tarefa">Prazo: 15/08/2022</p>
-          </div>
+        <div class="corpo" id="corpo1" ondragover="handleDragOver(event)" ondrop="handleDrop(event)">
         </div>
       </div>
       <div id="coluna2" class="coluna">
@@ -42,15 +34,7 @@
             <button>X</divbutton>
           </div>
         </div>
-        <div class="corpo">
-          <div draggable="true" class="tarefa">
-            <div class="cabecalho-tarefa">
-              <h5 class="titulo-tarefa">Tarefa teste</h5>
-              <button class="fechar-tarefa" onclick="handleDeleteTarefa()">X</button>
-            </div>
-            <p class="descricao-tarefa">Descriçãozinha</p>
-            <p class="prazo-tarefa">Prazo: 15/08/2022</p>
-          </div>
+        <div class="corpo" id="corpo2" ondragover="handleDragOver(event)" ondrop="handleDrop(event)">
         </div>
       </div>
       <div id="coluna3" class="coluna">
@@ -62,15 +46,7 @@
             <button>X</divbutton>
           </div>
         </div>
-        <div class="corpo">
-          <div draggable="true" class="tarefa">
-            <div class="cabecalho-tarefa">
-              <h5 class="titulo-tarefa">Tarefa teste</h5>
-              <button class="fechar-tarefa" onclick="handleDeleteTarefa()">X</button>
-            </div>
-            <p class="descricao-tarefa">Descriçãozinha</p>
-            <p class="prazo-tarefa">Prazo: 15/08/2022</p>
-          </div>
+        <div class="corpo" id="corpo3" ondragover="handleDragOver(event)" ondrop="handleDrop(event)">
         </div>
       </div>
     </main>
