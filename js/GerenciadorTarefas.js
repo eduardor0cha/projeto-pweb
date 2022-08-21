@@ -39,8 +39,8 @@ function createTarefa(tarefa) {
   tarefaElement.ondragstart = (event) => handleDragStart(event);
   tarefaElement.innerHTML = `
       <div class="cabecalho-tarefa">
-        <h5 class="titulo-tarefa">${tarefa.nome}</h5>
-        <button class="fechar-tarefa" onclick="handleDeleteTarefa(${tarefa.id})">X</button>
+        <h4 class="titulo-tarefa">${tarefa.nome}</h4>
+        <button class="deletar-tarefa" onclick="handleDeleteTarefa(${tarefa.id})">×</button>
       </div>
       <p class="descricao-tarefa">${tarefa.descricao}</p>
       <p class="prazo-tarefa">Prazo: ${tarefa.data}</p>`;
@@ -103,7 +103,7 @@ function handleDrop(event) {
 }
 
 function preencherColunas() {
-  var corpos = document.getElementsByClassName("corpo");
+  var corpos = document.getElementsByClassName("corpo-coluna");
   for (i in corpos) {
     corpos[i].innerHTML = "";
   }

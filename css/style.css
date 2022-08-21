@@ -1,94 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
 html {
   font-size: 16px;
+  font-family: "Inter", sans-serif;
+  background-image: linear-gradient(45deg, #41389a, #4c97fc);
 }
 
 * {
-  font-family: "Lucida Sans", "Lucida Sans Regular", Verdana, sans-serif;
   margin: 0;
   box-sizing: border-box;
-  /* border: 1px solid black; */
 }
 
 nav {
-  background-color: gainsboro;
-  font-size: 20px;
+  background-color: #00000033;
   height: 4rem;
-  text-align: center;
-  margin: 0;
   display: flex;
+  flex-direction: row;
   align-items: center;
-}
-
-#nome {
-  flex: 80%;
-}
-
-#addColuna {
-  flex: 20%;
-  text-align: center;
-  padding-right: 20px;
-  background-color: gray;
-  border: none;
-  cursor: pointer;
+  justify-content: center;
+  color: white;
 }
 
 main {
   display: flex;
   height: calc(100vh - 4rem);
-  justify-content: space-evenly;
-  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
 }
 
 .coluna {
-  border: 1px solid black;
-  height: 95%;
-  width: 30%;
-  text-align: center;
+  width: 100%;
+  background-color: #ebecf0;
+  border-radius: 0.3rem;
+  padding: 1rem;
 }
 
-.titulo {
-  font-size: 18px;
-  padding: 0.8rem;
+.titulo-coluna {
   display: flex;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+  margin-bottom: 1rem;
+  align-items: center;
 }
 
-.texto {
-  flex: 100%;
-  padding-left: 20%;
+.titulo-coluna button {
+  font-size: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
 }
 
-.button {
-  flex: 20%;
-  text-align: end;
+.titulo-coluna button:hover {
+  cursor: pointer;
 }
 
-.corpo {
-  font-size: 14px;
-  border: 1px solid black;
-  padding: 0.8rem;
-  height: 100%;
+.titulo-coluna button:active {
+  cursor: pointer;
+  background-color: #00000011;
+}
+
+.corpo-coluna {
+  height: calc(100% - 3.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .tarefa {
-  cursor: pointer;
+  background-color: white;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  box-shadow: 0 0.1rem gray;
 }
 
 .cabecalho-tarefa {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.titulo-tarefa {
-  width: 100%;
-}
-
-.fechar-tarefa {
+.deletar-tarefa {
+  font-size: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border-radius: 50%;
   border: none;
+  background-color: transparent;
+}
+
+.deletar-tarefa:hover {
   cursor: pointer;
 }
 
-.descricao-tarefa,
-.prazo-tarefa {
-  text-align: start;
-  font-size: 0.8rem;
+.deletar-tarefa:active {
+  cursor: pointer;
+  background-color: #00000011;
 }

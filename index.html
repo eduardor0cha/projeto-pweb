@@ -9,45 +9,44 @@
   </head>
   <body>
     <nav>
-      <div id="nome">To-Do Notes</div>
-      <button id="addColuna">+</button>
+      <h1 id="titulo">To-Do Notes</h1>
     </nav>
     <main>
       <div id="coluna1" class="coluna">
-        <div class="titulo">
-          <div class="texto">
-            <p>Pendente</p>
-          </div>
-          <div class="button">
-            <button>X</divbutton>
-          </div>
+        <div class="titulo-coluna">
+          <h3>Pendente</h3>
+          <button>+</button>
         </div>
-        <div class="corpo" id="corpo1" ondragover="handleDragOver(event)" ondrop="handleDrop(event)">
-        </div>
+        <div
+          class="corpo-coluna"
+          id="corpo1"
+          ondragover="handleDragOver(event)"
+          ondrop="handleDrop(event)"
+        ></div>
       </div>
       <div id="coluna2" class="coluna">
-        <div class="titulo">
-          <div class="texto">
-            <p>Fazendo</p>
-          </div>
-          <div class="button">
-            <button>X</divbutton>
-          </div>
+        <div class="titulo-coluna">
+          <h3>Fazendo</h3>
+          <button>+</button>
         </div>
-        <div class="corpo" id="corpo2" ondragover="handleDragOver(event)" ondrop="handleDrop(event)">
-        </div>
+        <div
+          class="corpo-coluna"
+          id="corpo2"
+          ondragover="handleDragOver(event)"
+          ondrop="handleDrop(event)"
+        ></div>
       </div>
       <div id="coluna3" class="coluna">
-        <div class="titulo">
-          <div class="texto">
-            <p>Feito</p>
-          </div>
-          <div class="button">
-            <button>X</divbutton>
-          </div>
+        <div class="titulo-coluna">
+          <h3>Feito</h3>
+          <button>+</button>
         </div>
-        <div class="corpo" id="corpo3" ondragover="handleDragOver(event)" ondrop="handleDrop(event)">
-        </div>
+        <div
+          class="corpo-coluna"
+          id="corpo3"
+          ondragover="handleDragOver(event)"
+          ondrop="handleDrop(event)"
+        ></div>
       </div>
     </main>
   </body>
