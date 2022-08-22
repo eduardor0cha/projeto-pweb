@@ -4,17 +4,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/style.css" />
     <script type="text/javascript" src="/js/GerenciadorTarefas.js"></script>
+    <script type="text/javascript" src="/js/GerenciadorColunas.js"></script>
     <script type="text/javascript" src="/domain/Tarefa.js"></script>
+    <script type="text/javascript" src="/domain/Coluna.js"></script>
     <script type="text/javascript" src="/js/Modal.js"></script>
     <title>To do</title>
   </head>
   <body>
     <nav>
+      <button onclick="abrirModalCriarColuna()" id="botao-adicionar-coluna">
+        Adicionar coluna
+      </button>
       <h1 id="titulo">To-Do Notes</h1>
-      <button onclick="abrirModalCriarTarefa()">Adicionar tarefa</button>
+      <button onclick="abrirModalCriarTarefa()" id="botao-adicionar-tarefa">
+        Adicionar tarefa
+      </button>
     </nav>
-    <main>
-      <div id="coluna1" class="coluna">
+    <main id="main">
+      <div id="coluna1" class="coluna" data-identificador="coluna1">
         <div class="titulo-coluna">
           <h3>Pendente</h3>
           <button>×</button>
@@ -26,7 +33,7 @@
           ondrop="handleDrop(event)"
         ></div>
       </div>
-      <div id="coluna2" class="coluna">
+      <div id="coluna2" class="coluna" data-identificador="coluna2">
         <div class="titulo-coluna">
           <h3>Fazendo</h3>
           <button>×</button>
@@ -38,7 +45,7 @@
           ondrop="handleDrop(event)"
         ></div>
       </div>
-      <div id="coluna3" class="coluna">
+      <div id="coluna3" class="coluna" data-identificador="coluna3">
         <div class="titulo-coluna">
           <h3>Feito</h3>
           <button>×</button>
@@ -80,6 +87,34 @@
             name="campo-prazo-tarefa"
             id="campo-prazo-tarefa"
           />
+          <label for="campo-coluna-tarefa">Coluna:</label>
+          <select id="campo-coluna-tarefa" name="campo-coluna-tarefa" >
+          </select>
+          <button type="submit" class="botao-submit-modal">Criar</button>
+        </form>
+      </div>
+    </div>
+    <div class="modal" id="modal-criar-coluna">
+      <div class="modal-conteudo">
+        <div class="cabecalho-modal">
+          <h1>Criar coluna</h1>
+          <button class="fechar-modal" onclick="fecharModalCriarColuna()">
+            ×
+          </button>
+        </div>
+        <form onsubmit="submitCriarColuna(event)" autocomplete="off">
+          <label for="campo-titulo-coluna">Titulo:</label>
+          <input
+            type="text"
+            name="campo-titulo-coluna"
+            id="campo-titulo-coluna"
+          />
+          <label for="campo-descricao-coluna">Identificador:</label>
+          <input
+            type="text"
+            name="campo-identificador-coluna"
+            id="campo-identificador-coluna"
+          ></input>
           <button type="submit" class="botao-submit-modal">Criar</button>
         </form>
       </div>

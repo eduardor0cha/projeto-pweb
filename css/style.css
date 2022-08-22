@@ -22,14 +22,22 @@ nav {
 }
 
 nav button {
-  position: absolute;
-  right: 2rem;
   background-color: #ffffff42;
   border: none;
   border-radius: 0.3rem;
   color: white;
   font-size: 1rem;
   padding: 0.5rem;
+}
+
+#botao-adicionar-tarefa {
+  position: absolute;
+  right: 2rem;
+}
+
+#botao-adicionar-coluna {
+  position: absolute;
+  left: 2rem;
 }
 
 nav button:hover {
@@ -45,9 +53,11 @@ main {
   height: calc(100vh - 4rem);
   gap: 1rem;
   padding: 1rem;
+  overflow-x: auto;
 }
 
 .coluna {
+  min-width: 25rem;
   width: 100%;
   background-color: #ebecf0;
   border-radius: 0.3rem;

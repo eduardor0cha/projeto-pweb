@@ -1,9 +1,5 @@
 var tarefas = [];
 
-window.onload = () => {
-  preencherColunas();
-};
-
 function createTarefa(tarefa) {
   const tarefaElement = document.createElement("div");
   tarefaElement.classList.add("tarefa");
@@ -59,18 +55,11 @@ function handleDrop(event) {
 
   for (i in tarefas) {
     if (tarefas[i].id == tarefa.dataset.id) {
-      switch (event.target.id) {
-        case "corpo1":
-          tarefas[i].coluna = "pendente";
-          break;
-
-        case "corpo2":
-          tarefas[i].coluna = "fazendo";
-          break;
-
-        case "corpo3":
-          tarefas[i].coluna = "feito";
-          break;
+      for (j in colunas) {
+        console.log(event.target.dataset);
+        if (event.target.dataset.identificador == colunas[j].identificador) {
+          tarefas[i].coluna = colunas[j].identificador;
+        }
       }
     }
   }
@@ -86,19 +75,13 @@ function preencherColunas() {
 
   const json = JSON.parse(localStorage.getItem("tarefas"));
   tarefas = Tarefa.createArrayFromJSON(json);
-  for (i in tarefas) {
-    switch (tarefas[i].coluna) {
-      case "pendente":
-        document.getElementById("corpo1").appendChild(createTarefa(tarefas[i]));
-        break;
-
-      case "fazendo":
-        document.getElementById("corpo2").appendChild(createTarefa(tarefas[i]));
-        break;
-
-      case "feito":
-        document.getElementById("corpo3").appendChild(createTarefa(tarefas[i]));
-        break;
+  for (i in colunas) {
+    for (j in tarefas) {
+      if (colunas[i].identificador == tarefas[j].coluna) {
+        document
+          .getElementById(`corpo-${colunas[i].identificador}`)
+          .appendChild(createTarefa(tarefas[j]));
+      }
     }
   }
 }
