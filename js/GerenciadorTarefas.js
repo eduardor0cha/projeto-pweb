@@ -55,19 +55,21 @@ function handleDrop(event) {
   event.dataTransfer.clearData();
   var tarefa = document.getElementById(`tarefa${idTarefa}`);
 
+  if (event.target.className != "corpo-coluna") return;
+
   for (i in tarefas) {
     if (tarefas[i].id == tarefa.dataset.id) {
       switch (event.target.id) {
         case "corpo1":
-          tarefas[i].estado = "pendente";
+          tarefas[i].coluna = "pendente";
           break;
 
         case "corpo2":
-          tarefas[i].estado = "fazendo";
+          tarefas[i].coluna = "fazendo";
           break;
 
         case "corpo3":
-          tarefas[i].estado = "feito";
+          tarefas[i].coluna = "feito";
           break;
       }
     }
@@ -85,7 +87,7 @@ function preencherColunas() {
   const json = JSON.parse(localStorage.getItem("tarefas"));
   tarefas = Tarefa.createArrayFromJSON(json);
   for (i in tarefas) {
-    switch (tarefas[i].estado) {
+    switch (tarefas[i].coluna) {
       case "pendente":
         document.getElementById("corpo1").appendChild(createTarefa(tarefas[i]));
         break;

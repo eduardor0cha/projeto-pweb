@@ -1,10 +1,10 @@
 class Tarefa {
-  constructor({ id, nome, descricao, data, estado }) {
+  constructor({ id, nome, descricao, data, coluna }) {
     this.id = id;
     this.nome = nome;
     this.descricao = descricao;
     this.data = data;
-    this.estado = estado;
+    this.coluna = coluna;
   }
 
   static fromJSON(json) {
@@ -22,7 +22,7 @@ class Tarefa {
       nome: this.nome,
       descricao: this.descricao,
       data: this.data,
-      estado: this.estado,
+      coluna: this.coluna,
     };
   }
 }
