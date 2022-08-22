@@ -1,32 +1,6 @@
 var tarefas = [];
 
 window.onload = () => {
-  if (JSON.parse(localStorage.getItem("tarefas")).length == 0) {
-    tarefasJSON = [
-      {
-        id: 1,
-        nome: "Tarefa 1",
-        descricao: "Descrição da tarefa 1",
-        data: "01/01/2020",
-        estado: "pendente",
-      },
-      {
-        id: 2,
-        nome: "Tarefa 2",
-        descricao: "Descrição da tarefa 2",
-        data: "01/01/2020",
-        estado: "fazendo",
-      },
-      {
-        id: 3,
-        nome: "Tarefa 3",
-        descricao: "Descrição da tarefa 3",
-        data: "01/01/2020",
-        estado: "feito",
-      },
-    ];
-    localStorage.setItem("tarefas", JSON.stringify(tarefasJSON));
-  }
   preencherColunas();
 };
 

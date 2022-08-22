@@ -5,17 +5,19 @@
     <link rel="stylesheet" href="css/style.css" />
     <script type="text/javascript" src="/js/GerenciadorTarefas.js"></script>
     <script type="text/javascript" src="/domain/tarefa.js"></script>
+    <script type="text/javascript" src="/js/Modal.js"></script>
     <title>To do</title>
   </head>
   <body>
     <nav>
       <h1 id="titulo">To-Do Notes</h1>
+      <button onclick="abrirModalCriarTarefa()">Adicionar tarefa</button>
     </nav>
     <main>
       <div id="coluna1" class="coluna">
         <div class="titulo-coluna">
           <h3>Pendente</h3>
-          <button>+</button>
+          <button>×</button>
         </div>
         <div
           class="corpo-coluna"
@@ -27,7 +29,7 @@
       <div id="coluna2" class="coluna">
         <div class="titulo-coluna">
           <h3>Fazendo</h3>
-          <button>+</button>
+          <button>×</button>
         </div>
         <div
           class="corpo-coluna"
@@ -39,7 +41,7 @@
       <div id="coluna3" class="coluna">
         <div class="titulo-coluna">
           <h3>Feito</h3>
-          <button>+</button>
+          <button>×</button>
         </div>
         <div
           class="corpo-coluna"
@@ -49,5 +51,38 @@
         ></div>
       </div>
     </main>
+    <div class="modal" id="modal-criar-tarefa">
+      <div class="modal-conteudo">
+        <div class="cabecalho-modal">
+          <h1>Criar tarefa</h1>
+          <button class="fechar-modal" onclick="fecharModalCriarTarefa()">
+            ×
+          </button>
+        </div>
+        <form onsubmit="submitCriarTarefa(event)" autocomplete="off">
+          <label for="campo-titulo-tarefa">Titulo:</label>
+          <input
+            type="text"
+            name="campo-titulo-tarefa"
+            id="campo-titulo-tarefa"
+          />
+          <label for="campo-descricao-tarefa">Descrição:</label>
+          <textarea
+            type="text"
+            name="campo-descricao-tarefa"
+            id="campo-descricao-tarefa"
+            cols="20"
+            rows="5"
+          ></textarea>
+          <label for="campo-prazo-tarefa">Prazo:</label>
+          <input
+            type="date"
+            name="campo-prazo-tarefa"
+            id="campo-prazo-tarefa"
+          />
+          <button type="submit" class="botao-submit-modal">Criar</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
